@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #080808;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#particles canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.boxshadow{
+  box-shadow: 1px 1px 8px gray;
+}
+
+.btn{
+  color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 250px;
+  text-align: center;
+  font-weight: 500;
+}
+
+*{
+  transition: 0.5s all ease;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
